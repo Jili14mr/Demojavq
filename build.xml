@@ -1,4 +1,6 @@
-<project name="HelloWorld" basedir="." default="main">
+<fileset id="sourcefiles" dir="src" includes="**/*.java"/>
+<echo> sourcefiles = ${toString:sourcefiles} </echo>
+<project name="$sourcefiles" basedir="." default="main">
 
     <property name="src.dir"     value="src"/>
 
@@ -6,7 +8,7 @@
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="${build.dir}/jar"/>
 
-    <property name="main-class"  value="oata.HelloWorld"/>
+    <property name="main-class"  value="oata.$projectname"/>
 
 
 
